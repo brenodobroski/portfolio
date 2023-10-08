@@ -1,0 +1,259 @@
+@use "./sass/variables" as *;
+
+.Home {
+  background-color: #171717;
+  height: 100vh;
+  overflow-x: hidden;
+
+  header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(217, 217, 217, 0.2);
+    background-color: transparent;
+    z-index: 2024;
+
+    .left {
+      display: flex;
+
+      .breno-dobroski p {
+        padding-right: 67px;
+      }
+      .breno-dobroski span {
+        color: $primary-color;
+      }
+
+      a {
+        color: white;
+      }
+
+      p {
+        color: white;
+        padding: 33px 40px;
+        border-right: 1px solid rgba(217, 217, 217, 0.2);
+        height: 100%;
+      }
+
+      .active {
+        border-bottom: 4px solid $primary-color;
+      }
+    }
+
+    .right {
+      p {
+        color: white;
+        padding: 33px 40px;
+        border-left: 1px solid rgba(217, 217, 217, 0.2);
+        height: 100%;
+        transition: all 0.3s ease-in;
+      }
+
+      p:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .s-hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 180px;
+    padding-left: 13%;
+
+    h1 {
+      color: white;
+      font-size: 71px;
+      font-weight: 700;
+      letter-spacing: -0.71px;
+    }
+
+    &__toptitle {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+    }
+
+    &__subtitle {
+      color: #4e36e9;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: -0.48px;
+      margin-bottom: 70px;
+    }
+
+    &__number {
+      margin-bottom: 30px;
+    }
+
+    &__email {
+      margin-bottom: 30px;
+    }
+    &__github {
+      margin-bottom: 30px;
+    }
+
+    .blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(150px);
+      -webkit-backdrop-filter: blur(150px);
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .const {
+      color: $const-color;
+    }
+
+    .name {
+      color: $name-color;
+    }
+    .string {
+      color: $string-color;
+    }
+
+    .comment {
+      color: #62728b;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+      margin-bottom: 10px;
+    }
+
+    .stat {
+      font-family: "JetBrains Mono", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+    }
+
+    .circle {
+      z-index: 1;
+      animation: circle-move 3s linear infinite;
+    }
+
+    @keyframes circle-move {
+      0% {
+        transform: translateX(0);
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateX(0px);
+        transform: translateY(-150px);
+      }
+
+      100% {
+        transform: translateX(0);
+        transform: translateY(0);
+      }
+    }
+
+    .s-hero__text {
+      z-index: 3;
+    }
+
+    .github-link {
+      color: $string-color;
+      text-decoration: underline;
+    }
+
+    .scroll-btn {
+      width: 30px;
+      height: 50px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      outline: 2px solid $primary-color;
+      box-shadow: 0px 0px 10px $primary-color;
+      position: relative;
+      z-index: 3;
+      margin-left: 120%;
+      margin-top: 30px;
+    }
+
+    .scroll {
+      width: 5px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: $primary-color;
+      box-shadow: 0px 0px 10px $primary-color;
+      animation: scroll_4013 2s linear infinite;
+      transform: translateY(40%);
+    }
+
+    .scroll-btn:after {
+      content: "scroll";
+      position: absolute;
+      top: 140%;
+      color: whitesmoke;
+      font-family: "Space Grotesk", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    @keyframes scroll_4013 {
+      0% {
+        transform: translateY(40%);
+      }
+
+      50% {
+        transform: translateY(90%);
+      }
+    }
+  }
+
+  .s-habilities {
+    background-image: url("./background-habilities.svg");
+    background-color: $primary-color;
+    margin-top: 39px;
+    padding-top: 120px;
+    padding-left: 13%;
+    z-index: 0;
+
+    &__title {
+      color: white;
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: -0.64px;
+      margin-bottom: 107px;
+    }
+
+    .cards {
+      width: 100%;
+      max-width: 1026px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 64px;
+      row-gap: 64px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .s-projects {
+    position: relative;
+    margin-top: 200px;
+    margin-left: 13%;
+
+    .planet {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import "./CardHabilities.scss";
-const CardHabilities = ({ maxWidth, title, desc }) => {
+const CardHabilities = ({ maxWidth, title, desc, logo }) => {
   return (
     <>
       <div className="card">
         <div className="content">
           <div className="back">
             <div className="back-content">
-              <img src="./react.svg" alt="" />
+              <img src={logo} alt="" />
 
               <div className="background-loader">
                 <div
