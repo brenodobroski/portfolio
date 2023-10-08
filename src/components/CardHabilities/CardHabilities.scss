@@ -191,3 +191,11 @@
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 480px) {
+  .title {
+    h2 {
+      margin-left: 0;
+    }
+  }
+}

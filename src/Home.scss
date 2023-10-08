@@ -355,10 +355,17 @@
 @media (max-width: 480px) {
   header {
     width: 100vw !important;
+    height: 65px;
     right: 0;
+    top: 0 !important;
     left: 0;
+
+    .left {
+      height: 100% !important;
+    }
+
     .breno-dobroski p {
-      padding-right: 176px !important;
+      padding: 24px 166px 24px 16px !important;
     }
 
     .hello {
@@ -392,6 +399,7 @@
         font-size: 20px;
         user-select: none;
         margin-right: 24px;
+        margin-top: 18px;
       }
 
       .checkmark {
@@ -558,6 +566,8 @@
       width: 100% !important;
       margin-top: 64px !important;
       margin-bottom: 64px !important;
+      font-size: 20px !important;
+      margin-right: 16px !important;
     }
   }
 }
