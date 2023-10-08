@@ -124,7 +124,15 @@ const Home = () => {
           </div>
         </div>
         <div className="right">
-          <a href="">
+          <label className="container">
+            <input type="checkbox" />
+            <div className="checkmark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </label>
+          <a href="" className="contact-me">
             <p>// contact-me</p>
           </a>
         </div>
@@ -266,6 +274,7 @@ comecei a estudar a pouco e estou me aperfeiçoando
           itemClass="carousel-item"
           dotListClass="custom-dot-list-style"
           sliderClass="slider-class"
+          removeArrowOnDeviceType="mobile"
         >
           <CardProject
             title="Redesign Neon"

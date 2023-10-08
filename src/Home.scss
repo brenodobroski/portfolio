@@ -27,6 +27,10 @@
     border-bottom: 1px solid rgba(217, 217, 217, 0.2);
     z-index: 2024;
 
+    .container {
+      display: none;
+    }
+
     .black {
       background-color: black;
     }
@@ -344,6 +348,216 @@
       width: 52%;
       margin-top: 120px;
       margin-bottom: 120px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    width: 100vw !important;
+    right: 0;
+    left: 0;
+    .breno-dobroski p {
+      padding-right: 176px !important;
+    }
+
+    .hello {
+      display: none;
+    }
+    .habilities {
+      display: none;
+    }
+    .projects {
+      display: none;
+    }
+    .about-me {
+      display: none;
+    }
+
+    .right {
+      height: 100%; /* Hide the default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .container {
+        display: block;
+
+        position: relative;
+        cursor: pointer;
+        font-size: 20px;
+        user-select: none;
+        margin-right: 24px;
+      }
+
+      .checkmark {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 1.3em;
+        width: 1.3em;
+      }
+
+      .checkmark span {
+        width: 32px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+      }
+
+      .checkmark span:nth-child(1) {
+        top: 10%;
+      }
+
+      .checkmark span:nth-child(2) {
+        top: 50%;
+      }
+
+      .checkmark span:nth-child(3) {
+        top: 90%;
+      }
+
+      .container input:checked + .checkmark span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        -moz-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+        -o-transform: translateY(-50%) rotate(45deg);
+      }
+
+      .container input:checked + .checkmark span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+        -moz-transform: translateY(-50%) rotate(-45deg);
+        -ms-transform: translateY(-50%) rotate(-45deg);
+        -o-transform: translateY(-50%) rotate(-45deg);
+      }
+
+      .container input:checked + .checkmark span:nth-child(3) {
+        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
+        -moz-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+        -o-transform: translateX(-50px);
+        opacity: 0;
+      }
+    }
+
+    .contact-me {
+      display: none;
+    }
+  }
+
+  .s-hero {
+    width: 100vw;
+    flex-direction: column;
+    padding-left: 16px !important;
+
+    &__text {
+      text-align: center;
+
+      h1 {
+        font-size: 48px !important;
+      }
+    }
+
+    &__toptitle {
+      font-size: 16px !important;
+    }
+
+    &__subtitle {
+      font-size: 24px !important;
+    }
+
+    &__stats {
+      display: none;
+    }
+
+    .scroll-btn {
+      margin-left: 45% !important;
+    }
+
+    .blur {
+      height: 100% !important;
+    }
+
+    .circle {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .s-habilities {
+    margin-top: 0px !important;
+
+    h2 {
+      font-size: 36px !important;
+      margin-left: 50px;
+    }
+
+    .cards {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .s-projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 16px !important;
+    margin-top: 150px !important;
+
+    h2 {
+      font-size: 36px !important;
+    }
+    .planet {
+      right: -460px !important;
+      top: -200px;
+      width: 843px;
+      height: 843px;
+      z-index: 0;
+    }
+
+    .carousel-container {
+      width: 100% !important;
+      height: 400px !important;
+
+      .carousel-item {
+        width: 300px !important;
+        height: 300px !important;
+        margin-right: 16px !important;
+      }
+    }
+  }
+
+  .s-about-me {
+    margin-top: 150px !important;
+    margin-left: 16px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5000;
+
+    h2 {
+      font-size: 36px !important;
+    }
+
+    p {
+      text-align: center;
+      width: 100% !important;
+      margin-top: 64px !important;
+      margin-bottom: 64px !important;
     }
   }
 }

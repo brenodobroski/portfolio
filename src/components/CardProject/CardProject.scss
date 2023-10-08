@@ -1,8 +1,8 @@
 @use "../../sass/variables" as *;
 
 .CardProject {
-  height: 400px;
-  width: 440px;
+  height: 440px;
+  width: 400px;
   position: relative;
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow: hidden;
@@ -195,4 +195,28 @@
 
 .btn-site-project:hover .arrow:before {
   right: 0;
+}
+
+@media (max-width: 480px) {
+  .CardProject {
+    width: 300px;
+    height: 300px;
+
+    .text-title {
+      font-size: 24px;
+    }
+
+    .text-body {
+      font-size: 12px;
+    }
+
+    .card-description {
+      height: 75%;
+      bottom: -120px;
+    }
+
+    .CardProject:hover .card-description {
+      transform: translateY(-50%);
+    }
+  }
 }
