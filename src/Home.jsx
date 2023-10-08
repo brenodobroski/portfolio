@@ -1,10 +1,37 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { useRef, useState } from "react";
 import "./Home.scss";
 import CardHabilities from "./components/CardHabilities/CardHabilities";
 import CardProject from "./components/CardProject/CardProject";
+import BtnAbout from "./components/Btn-about/BtnAbout";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 const Home = () => {
+  // ------------------------- JAVASCRIPT ------------------------------
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 2,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   const scrollHeader = () => {
     const element = document.getElementById("s-hero");
     if (element) {
@@ -31,6 +58,14 @@ const Home = () => {
     }
   };
 
+  const scrollAbout = () => {
+    const element = document.getElementById("s-about-me");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [scrollTop, setScrollTop] = useState(0);
 
   const handleScroll = (event) => {
@@ -50,6 +85,8 @@ const Home = () => {
       nav.classList.add("active");
     });
   });
+
+  // ---------------------------- HTML --------------------------------
 
   return (
     <div className="Home" onScroll={handleScroll}>
@@ -81,7 +118,7 @@ const Home = () => {
             </a>
           </div>
           <div className="header-link about-me">
-            <a href="">
+            <a onClick={scrollAbout} href="">
               <p>// about-me</p>
             </a>
           </div>
@@ -219,7 +256,17 @@ comecei a estudar a pouco e estou me aperfeiçoando
         <h2>// projects</h2>
         <img src="./planet.svg" className="planet" alt="" />
 
-        <div className="cards">
+        <Carousel
+          swipeable={true}
+          draggable={true}
+          showDots={true}
+          responsive={responsive}
+          infinite={true}
+          containerClass="carousel-container"
+          itemClass="carousel-item"
+          dotListClass="custom-dot-list-style"
+          sliderClass="slider-class"
+        >
           <CardProject
             title="Redesign Neon"
             img="./neon.svg"
@@ -238,7 +285,48 @@ comecei a estudar a pouco e estou me aperfeiçoando
             linkSite="https://wallet-app-peach.vercel.app/"
             circleProject="./circle-wallet.svg"
           />
-        </div>
+          <CardProject
+            title="Wallet App"
+            img="./walletApp.svg"
+            desc="Tecnologias usadas: HTML/CSS/JS.
+            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
+            "
+            linkGithub="https://github.com/brenodobroski/wallet-app"
+            linkSite="https://wallet-app-peach.vercel.app/"
+            circleProject="./circle-wallet.svg"
+          />
+          <CardProject
+            title="Wallet App"
+            img="./walletApp.svg"
+            desc="Tecnologias usadas: HTML/CSS/JS.
+            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
+            "
+            linkGithub="https://github.com/brenodobroski/wallet-app"
+            linkSite="https://wallet-app-peach.vercel.app/"
+            circleProject="./circle-wallet.svg"
+          />
+          <CardProject
+            title="Wallet App"
+            img="./walletApp.svg"
+            desc="Tecnologias usadas: HTML/CSS/JS.
+            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
+            "
+            linkGithub="https://github.com/brenodobroski/wallet-app"
+            linkSite="https://wallet-app-peach.vercel.app/"
+            circleProject="./circle-wallet.svg"
+          />
+        </Carousel>
+      </section>
+
+      <section className="s-about-me" id="s-about-me">
+        <h2>// About me</h2>
+        <p>
+          Tenho 21 anos e comecei a migrar para programação em 2021, antes
+          cursava economia e decidi largar tudo para me dedicar a essa área que
+          sempre sonhei, meu maior objetivo é me tornar um desenvolvedor
+          Full-Stack e estou em busca do meu primeiro emprego na área.
+        </p>
+        <BtnAbout />
       </section>
     </div>
   );
