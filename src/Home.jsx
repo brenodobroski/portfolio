@@ -1,36 +1,86 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
+import { useState } from "react";
 import "./Home.scss";
 import CardHabilities from "./components/CardHabilities/CardHabilities";
 import CardProject from "./components/CardProject/CardProject";
 
 const Home = () => {
+  const scrollHeader = () => {
+    const element = document.getElementById("s-hero");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+
+    console.log("teste");
+  };
+
+  const scrollHabilities = () => {
+    const element = document.getElementById("s-habilities");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollProjects = () => {
+    const element = document.getElementById("s-projects");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleScroll = (event) => {
+    setScrollTop(event.currentTarget.scrollTop);
+  };
+
+  const item = document.querySelectorAll(".header-link");
+
+  item.forEach((nav) => {
+    nav.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      item.forEach((itemNav) => {
+        itemNav.classList.remove("active");
+      });
+
+      nav.classList.add("active");
+    });
+  });
+
   return (
-    <div className="Home">
-      <header>
+    <div className="Home" onScroll={handleScroll}>
+      <header
+        id="header"
+        style={{ backgroundColor: scrollTop ? "black" : "transparent" }}
+      >
         <div className="left">
-          <div className="breno-dobroski">
+          <div className="header-link breno-dobroski">
             <p>
               <a href="">
                 breno-dobroski.<span>_</span>
               </a>
             </p>
           </div>
-          <div className="hello active">
-            <a href="">
+          <div className="header-link hello active">
+            <a onClick={scrollHeader} href="">
               <p>// hello</p>
             </a>
           </div>
-          <div className="habilities">
-            <a href="">
+          <div className="header-link habilities">
+            <a onClick={scrollHabilities} href="">
               <p>// habilities</p>
             </a>
           </div>
-          <div className="projects">
-            <a href="">
+          <div className="header-link projects">
+            <a onClick={scrollProjects} href="">
               <p>// projects</p>
             </a>
           </div>
-          <div className="about-me">
+          <div className="header-link about-me">
             <a href="">
               <p>// about-me</p>
             </a>
@@ -42,7 +92,7 @@ const Home = () => {
           </a>
         </div>
       </header>
-      <section className="s-hero">
+      <section className="s-hero" id="s-hero">
         <div className="s-hero__text">
           <h3 className="s-hero__toptitle">Ola, eu sou</h3>
           <h1>Breno Dobroski</h1>
@@ -116,7 +166,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="s-habilities">
+      <section className="s-habilities" id="s-habilities">
         <h2 className="s-habilities__title">// habilities</h2>
         <div className="cards">
           <CardHabilities
@@ -165,12 +215,29 @@ comecei a estudar a pouco e estou me aperfeiçoando
         </div>
       </section>
 
-      <section className="s-projects">
+      <section className="s-projects" id="s-projects">
         <h2>// projects</h2>
         <img src="./planet.svg" className="planet" alt="" />
 
         <div className="cards">
-          <CardProject />
+          <CardProject
+            title="Redesign Neon"
+            img="./neon.svg"
+            desc="Tecnologias usadas: HTML/SASS/JS. O site foi completamente adaptado para celular, tablets e computadores, além de utilizar js para criar modais e menus nos botões"
+            linkGithub="https://github.com/brenodobroski/neon-project"
+            linkSite="https://redesign-neon.vercel.app/"
+            circleProject="./circle-project.svg"
+          />
+          <CardProject
+            title="Wallet App"
+            img="./walletApp.svg"
+            desc="Tecnologias usadas: HTML/CSS/JS.
+            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
+            "
+            linkGithub="https://github.com/brenodobroski/wallet-app"
+            linkSite="https://wallet-app-peach.vercel.app/"
+            circleProject="./circle-wallet.svg"
+          />
         </div>
       </section>
     </div>
