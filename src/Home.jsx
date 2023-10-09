@@ -210,12 +210,16 @@ const Home = () => {
         >
           <div id="twitter" className="social-btn flex-center">
             <img src="./github.svg" alt="" />
-            <a href="https://github.com/brenodobroski">@brenodobroski</a>
+            <a href="https://github.com/brenodobroski" target="blank">
+              @brenodobroski
+            </a>
           </div>
 
           <div id="linkedin" className="social-btn flex-center">
             <img src="./linkedin.svg" alt="" />
-            <a href="https://linkedin.com/in/brenodobroski">in/brenodobroski</a>
+            <a href="https://linkedin.com/in/brenodobroski" target="blank">
+              in/brenodobroski
+            </a>
           </div>
 
           <div id="github" className="social-btn flex-center">
