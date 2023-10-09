@@ -469,6 +469,7 @@
 
   .s-hero {
     width: 100vw;
+    height: 100vh;
     flex-direction: column;
     padding-left: 16px !important;
 
@@ -525,11 +526,11 @@
 
     .social-btn {
       cursor: pointer;
-      height: 60px;
-      width: 60px;
+      height: 70px;
+      width: 70px;
       font-family: "Jetbrains Mono", sans-serif;
       color: white;
-      padding: 5px;
+
       transition: 0.3s;
       justify-content: center;
 
@@ -562,16 +563,16 @@
     }
 
     .social-btn:hover {
-      width: 200px;
+      width: 210px;
     }
 
     .social-btn:hover a {
       padding: 2px;
-      width: 170px;
+      width: 110px;
     }
     .social-btn:hover span {
       padding: 2px;
-      width: 170px;
+      width: 110px;
     }
 
     #twitter svg {

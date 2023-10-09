@@ -224,7 +224,10 @@ const Home = () => {
 
           <div id="github" className="social-btn flex-center">
             <img src="email.svg" alt="" />
-            <span>brenodobroski@gmail.com</span>
+            <span>
+              brenodobroski <br />
+              @gmail.com
+            </span>
           </div>
           <div id="github" className="social-btn flex-center">
             <img src="phone.svg" alt="" />
