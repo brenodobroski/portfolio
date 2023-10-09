@@ -204,6 +204,29 @@ const Home = () => {
             <div className="scroll"> </div>
           </button>
         </div>
+        <div
+          style={{ backgroundColor: scrollTop ? "black" : "transparent" }}
+          className="social-links"
+        >
+          <div id="twitter" className="social-btn flex-center">
+            <img src="./github.svg" alt="" />
+            <a href="https://github.com/brenodobroski">@brenodobroski</a>
+          </div>
+
+          <div id="linkedin" className="social-btn flex-center">
+            <img src="./linkedin.svg" alt="" />
+            <a href="https://linkedin.com/in/brenodobroski">in/brenodobroski</a>
+          </div>
+
+          <div id="github" className="social-btn flex-center">
+            <img src="email.svg" alt="" />
+            <span>brenodobroski@gmail.com</span>
+          </div>
+          <div id="github" className="social-btn flex-center">
+            <img src="phone.svg" alt="" />
+            <span>(21) 97045-2147</span>
+          </div>
+        </div>
 
         <div className="s hero__background">
           <div className="blur"></div>
@@ -288,7 +311,7 @@ comecei a estudar a pouco e estou me aperfeiçoando
             title="Wallet App"
             img="./walletApp.svg"
             desc="Tecnologias usadas: HTML/CSS/JS.
-            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
+            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação e filtros mensais
             "
             linkGithub="https://github.com/brenodobroski/wallet-app"
             linkSite="https://wallet-app-peach.vercel.app/"
@@ -298,27 +321,7 @@ comecei a estudar a pouco e estou me aperfeiçoando
             title="Wallet App"
             img="./walletApp.svg"
             desc="Tecnologias usadas: HTML/CSS/JS.
-            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
-            "
-            linkGithub="https://github.com/brenodobroski/wallet-app"
-            linkSite="https://wallet-app-peach.vercel.app/"
-            circleProject="./circle-wallet.svg"
-          />
-          <CardProject
-            title="Wallet App"
-            img="./walletApp.svg"
-            desc="Tecnologias usadas: HTML/CSS/JS.
-            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
-            "
-            linkGithub="https://github.com/brenodobroski/wallet-app"
-            linkSite="https://wallet-app-peach.vercel.app/"
-            circleProject="./circle-wallet.svg"
-          />
-          <CardProject
-            title="Wallet App"
-            img="./walletApp.svg"
-            desc="Tecnologias usadas: HTML/CSS/JS.
-            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação, criação de conta e filtros mensais
+            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação e filtros mensais
             "
             linkGithub="https://github.com/brenodobroski/wallet-app"
             linkSite="https://wallet-app-peach.vercel.app/"
