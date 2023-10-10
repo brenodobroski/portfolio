@@ -84,6 +84,7 @@
     justify-content: space-between;
     padding-top: 180px;
     padding-left: 13%;
+    padding-bottom: 5rem;
 
     h1 {
       color: white;
@@ -131,7 +132,7 @@
       backdrop-filter: blur(150px);
       -webkit-backdrop-filter: blur(150px);
       width: 100vw;
-      height: 100vh;
+      height: 100%;
     }
 
     .const {
@@ -243,7 +244,6 @@
   .s-habilities {
     background-image: url("./background-habilities.svg");
     background-color: $primary-color;
-    margin-top: 39px;
     padding-top: 120px;
     padding-left: 13%;
     z-index: 0;
