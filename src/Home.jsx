@@ -124,15 +124,11 @@ const Home = () => {
           </div>
         </div>
         <div className="right">
-          <label className="container">
-            <input type="checkbox" />
-            <div className="checkmark">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </label>
-          <a href="" className="contact-me">
+          <a
+            target="blank"
+            href="https://wa.me/5521970452147?text=Ol%C3%A1%2C+acabei+de+ver+seu+portfolio+e+me+interessei+em+seu+trabalho%2C+pode+me+contar+mais+%3F"
+            className="contact-me"
+          >
             <p>// contact-me</p>
           </a>
         </div>
@@ -248,21 +244,20 @@ const Home = () => {
             logo="./react.svg"
             maxWidth="70px"
             title="React"
-            desc="React é uma ferramenta poderosissima e que ando buscando melhorar bastante,
-comecei a estudar a pouco e estou me aperfeiçoando
+            desc="Já possuo algum conhecimento e estou focado em aprimorar minhas habilidades com o React, uma ferramenta incrivelmente poderosa que tenho explorado recentemente.
 "
           />
           <CardHabilities
             logo="./sass.svg"
             maxWidth="85px"
             title="SASS"
-            desc="Conheci o SASS no inicio de 2022 e realmente fiquei encantado, venho evoluindo rapidamente na linguagem e sempre me aprimorando, hoje em dia não programo sem."
+            desc="Desde o início de 2022, tive a oportunidade de conhecer o SASS, e desde então, fiquei completamente cativado por essa linguagem. Venho progredindo rapidamente em minhas habilidades e, atualmente, não posso imaginar desenvolver sem ela."
           />
           <CardHabilities
             logo="./git.svg"
             maxWidth="100px"
             title="GIT"
-            desc="Tenho bons conhecimentos de git, criação de branches, pull, push, merge, e tambem conhecimentos de github como pull request, documentações e etc
+            desc="Possuo sólidos conhecimentos em Git, incluindo criação de branches, operações de pull, push, merge, bem como familiaridade com as funcionalidades do GitHub, como pull requests, documentação, entre outras.
 
 "
           />
@@ -270,21 +265,21 @@ comecei a estudar a pouco e estou me aperfeiçoando
             logo="./node.svg"
             maxWidth="50px"
             title="Node"
-            desc="Comecei a estudar Node a pouco mas ja tenho conhecimento de criação de API Rest e estou ainda fazendo cursos sobre
+            desc="Embora tenha começado a estudar Node.js recentemente, já adquiri conhecimentos na criação de APIs REST e continuo aprofundando meus conhecimentos por meio de cursos adicionais.
 "
           />
           <CardHabilities
             logo="./next.svg"
             maxWidth="30px"
             title="Next"
-            desc="Comecei a estudar Next a pouco tempo mas já gostei muito da ferramenta, venho buscando bastante me aperfeiçoar na ferramenta.
+            desc="Apesar de ter iniciado meus estudos em Next.js há pouco tempo, estou entusiasmado com a ferramenta e estou empenhado em aprimorar minhas habilidades com ela.
 "
           />
           <CardHabilities
             logo="./figma.svg"
             maxWidth="100px"
             title="Figma"
-            desc="Ja fiz muitos cursos de UI design e gosto muito da ferramenta, domino muito bem e consigo criar designs bem bonitos, este site foi inteiramente feito por mim !
+            desc="Concluí diversos cursos de design de UI e tenho grande afinidade com essa ferramenta. Tenho domínio sólido e consigo criar designs atrativos. Este site foi totalmente criado por mim!
 "
           />
         </div>
@@ -325,14 +320,14 @@ comecei a estudar a pouco e estou me aperfeiçoando
             circleProject="./circle-wallet.svg"
           />
           <CardProject
-            title="Wallet App"
-            img="./walletApp.svg"
-            desc="Tecnologias usadas: HTML/CSS/JS.
-            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação e filtros mensais
+            title="Movie List"
+            img="./movie.svg"
+            desc="Tecnologias usadas: React/SASS/AXIOS/React Router. O site mostra uma listagem de filmes, com uma pagina de detalhes e campo de busca
+
             "
-            linkGithub="https://github.com/brenodobroski/wallet-app"
-            linkSite="https://wallet-app-peach.vercel.app/"
-            circleProject="./circle-wallet.svg"
+            linkGithub="https://github.com/brenodobroski/movie-list"
+            linkSite="https://movie-list-flame-one.vercel.app/"
+            circleProject="./circle-movie.svg"
           />
         </Carousel>
       </section>
@@ -340,12 +335,30 @@ comecei a estudar a pouco e estou me aperfeiçoando
       <section className="s-about-me" id="s-about-me">
         <h2>// About me</h2>
         <p>
-          Tenho 21 anos e comecei a migrar para programação em 2021, antes
-          cursava economia e decidi largar tudo para me dedicar a essa área que
-          sempre sonhei, meu maior objetivo é me tornar um desenvolvedor
-          Full-Stack e estou em busca do meu primeiro emprego na área.
+          Oi! Eu sou o Breno! Sou estudante de Ciência da Computação
+          <br />
+          <br /> Comecei minha carreira na área de economia porém tive um
+          primeiro contato com a área de tecnologia e me apaixonei, hoje faço
+          muitos cursos e ja pude me envolver em alguns projetos que me deram
+          conhecimentos como HTML / CSS, Javascript, React, Tailwind, SASS,
+          Node.js, SQL e outros como vocês viram acima.
         </p>
-        <BtnAbout />
+        <div className="btns">
+          <BtnAbout />
+          <a
+            target="blank"
+            href="./Curriculo Breno Dobroski.pdf"
+            download="Curriculo Breno Dobroski.pdf"
+            className="btn-curriculo"
+          >
+            <button className="btn-site-project btn-curriculo-true">
+              Download curriculo
+              <div className="arrow-wrapper">
+                <div className="arrow"></div>
+              </div>
+            </button>
+          </a>
+        </div>
       </section>
     </div>
   );
