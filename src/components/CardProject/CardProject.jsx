@@ -21,7 +21,7 @@ const CardProject = ({
         <div className="btns-projects">
           <a href={linkSite} target="blank">
             <button className="btn-site-project">
-              Ir para o site
+              Ir para o projeto
               <div className="arrow-wrapper">
                 <div className="arrow"></div>
               </div>

@@ -104,22 +104,22 @@ const Home = () => {
           </div>
           <div className="header-link hello active">
             <a onClick={scrollHeader} href="">
-              <p>// hello</p>
+              <p># hello</p>
             </a>
           </div>
           <div className="header-link habilities">
             <a onClick={scrollHabilities} href="">
-              <p>// habilities</p>
+              <p># habilities</p>
             </a>
           </div>
           <div className="header-link projects">
             <a onClick={scrollProjects} href="">
-              <p>// projects</p>
+              <p># projects</p>
             </a>
           </div>
           <div className="header-link about-me">
             <a onClick={scrollAbout} href="">
-              <p>// about-me</p>
+              <p># about-me</p>
             </a>
           </div>
         </div>
@@ -129,7 +129,7 @@ const Home = () => {
             href="https://wa.me/5521970452147?text=Ol%C3%A1%2C+acabei+de+ver+seu+portfolio+e+me+interessei+em+seu+trabalho%2C+pode+me+contar+mais+%3F"
             className="contact-me"
           >
-            <p>// contact-me</p>
+            <p># contact-me</p>
           </a>
         </div>
       </header>
@@ -137,22 +137,20 @@ const Home = () => {
         <div className="s-hero__text">
           <h3 className="s-hero__toptitle">Ola, eu sou</h3>
           <h1>Breno Dobroski</h1>
-          <h2 className="s-hero__subtitle"> &gt; Web developer </h2>
+          <h2 className="s-hero__subtitle"> &gt; Data Scientist </h2>
 
           <div className="s-hero__stats">
             <div className="s-hero__number">
-              <h4 className="comment">// meu numero</h4>
+              <h4 className="comment"># my number</h4>
               <p>
-                <span className="const stat">const</span>{" "}
                 <span className="name stat">number</span>{" "}
                 <span className="const stat">=</span>{" "}
                 <span className="name stat">21 97045-2147</span>{" "}
               </p>
             </div>
             <div className="s-hero__email">
-              <h4 className="comment">// email</h4>
+              <h4 className="comment"># email</h4>
               <p>
-                <span className="const stat">const</span>{" "}
                 <span className="name stat">email</span>{" "}
                 <span className="const stat">=</span>{" "}
                 <span className="string stat">
@@ -161,9 +159,8 @@ const Home = () => {
               </p>
             </div>
             <div className="s-hero__github">
-              <h4 className="comment">// github</h4>
+              <h4 className="comment"># github</h4>
               <p>
-                <span className="const stat">const</span>{" "}
                 <span className="name stat">github</span>{" "}
                 <span className="const stat">=</span>{" "}
                 <span className="string stat">
@@ -178,9 +175,8 @@ const Home = () => {
               </p>
             </div>
             <div className="s-hero__linkedin">
-              <h4 className="comment">// linkedin</h4>
+              <h4 className="comment"># linkedin</h4>
               <p>
-                <span className="const stat">const</span>{" "}
                 <span className="name stat">linkedin</span>{" "}
                 <span className="const stat">=</span>{" "}
                 <span className="string stat">
@@ -238,20 +234,20 @@ const Home = () => {
       </section>
 
       <section className="s-habilities" id="s-habilities">
-        <h2 className="s-habilities__title">// habilities</h2>
+        <h2 className="s-habilities__title"># habilities</h2>
         <div className="cards">
           <CardHabilities
-            logo="./react.svg"
-            maxWidth="70px"
-            title="React"
-            desc="Já possuo algum conhecimento e estou focado em aprimorar minhas habilidades com o React, uma ferramenta incrivelmente poderosa que tenho explorado recentemente.
+            logo="./python.svg"
+            maxWidth="100px"
+            title="Python"
+            desc="Minha principal ferramenta, possuo conhecimento sólido do python e de suas bibliotecas como scikit-learn, pandas e etc.
 "
           />
           <CardHabilities
-            logo="./sass.svg"
-            maxWidth="85px"
-            title="SASS"
-            desc="Desde o início de 2022, tive a oportunidade de conhecer o SASS, e desde então, fiquei completamente cativado por essa linguagem. Venho progredindo rapidamente em minhas habilidades e, atualmente, não posso imaginar desenvolver sem ela."
+            logo="./sql.svg"
+            maxWidth="80px"
+            title="SQL"
+            desc="Tenho uma boa base e estou evoluindo na utilização do SQL"
           />
           <CardHabilities
             logo="./git.svg"
@@ -262,31 +258,31 @@ const Home = () => {
 "
           />
           <CardHabilities
-            logo="./node.svg"
-            maxWidth="50px"
-            title="Node"
-            desc="Embora tenha começado a estudar Node.js recentemente, já adquiri conhecimentos na criação de APIs REST e continuo aprofundando meus conhecimentos por meio de cursos adicionais.
+            logo="./powerbi.svg"
+            maxWidth="80px"
+            title="Power BI"
+            desc="Tenho ótimo conhecimento em Power BI em construções de dashboards interativos, alguns dos projetos estão na aba projects.
 "
           />
           <CardHabilities
-            logo="./next.svg"
-            maxWidth="30px"
-            title="Next"
-            desc="Apesar de ter iniciado meus estudos em Next.js há pouco tempo, estou entusiasmado com a ferramenta e estou empenhado em aprimorar minhas habilidades com ela.
+            logo="./machinelearning.svg"
+            maxWidth="50px"
+            title="Machine Learning"
+            desc="Estou me aperfeiçoando em criação de modelos preditivos e IA utilizando o scikit-learn, atualmente já crio modelos de árvore de decisão com facilidade
 "
           />
           <CardHabilities
             logo="./figma.svg"
             maxWidth="100px"
             title="Figma"
-            desc="Concluí diversos cursos de design de UI e tenho grande afinidade com essa ferramenta. Tenho domínio sólido e consigo criar designs atrativos. Este site foi totalmente criado por mim!
+            desc="Tenho domínio sólido e consigo criar designs atrativos. Este site foi totalmente criado por mim! Me auxilia na criação de dashboards mais intuitivos para o púbico final.
 "
           />
         </div>
       </section>
 
       <section className="s-projects" id="s-projects">
-        <h2>// projects</h2>
+        <h2># projects</h2>
         <img src="./planet.svg" className="planet" alt="" />
 
         <Carousel
@@ -302,46 +298,42 @@ const Home = () => {
           removeArrowOnDeviceType="mobile"
         >
           <CardProject
-            title="Redesign Neon"
-            img="./neon.svg"
-            desc="Tecnologias usadas: HTML/SASS/JS. O site foi completamente adaptado para celular, tablets e computadores, além de utilizar js para criar modais e menus nos botões"
-            linkGithub="https://github.com/brenodobroski/neon-project"
-            linkSite="https://redesign-neon.vercel.app/"
+            title="Decision Tree"
+            img="./decisiontree.svg"
+            desc="Projeto realizado para prever Score de Crédito utilizando o modelo de Árvore de Decisão atingindo uma incrivel acurácia de 98%
+            "
+            linkGithub="https://github.com/brenodobroski/EBAC-DECISIONTREE"
+            linkSite="https://github.com/brenodobroski/EBAC-DECISIONTREE"
             circleProject="./circle-project.svg"
           />
           <CardProject
-            title="Wallet App"
-            img="./walletApp.svg"
-            desc="Tecnologias usadas: HTML/CSS/JS.
-            Um site para registrar despesas, receitas e mostrar o balanço, conta com tela de autenticação e filtros mensais
-            "
-            linkGithub="https://github.com/brenodobroski/wallet-app"
-            linkSite="https://wallet-app-peach.vercel.app/"
+            title="Doenças Cardiovasculares"
+            img="./cardio.svg"
+            desc="Projeto realizado para prever Doenças Cardiovasculares utilizando a Regressão Logistica, utilizando tecnologias como Pandas, MatplotLib e Scikit-Learn"
+            linkGithub="https://github.com/brenodobroski/Projeto-DoencasCardiovasculares"
+            linkSite="https://github.com/brenodobroski/Projeto-DoencasCardiovasculares"
             circleProject="./circle-wallet.svg"
           />
           <CardProject
-            title="Movie List"
-            img="./movie.svg"
-            desc="Tecnologias usadas: React/SASS/AXIOS/React Router. O site mostra uma listagem de filmes, com uma pagina de detalhes e campo de busca
-
-            "
-            linkGithub="https://github.com/brenodobroski/movie-list"
-            linkSite="https://movie-list-flame-one.vercel.app/"
+            title="Agrupamento com K-means"
+            img="./kmeans.svg"
+            desc="Projeto realizado para agrupar espécies de Pinguim utilizando o K-means, padronizamos os dados utilizando o StandardScaler e gráficos com plotly "
+            linkGithub="https://github.com/brenodobroski/Pinguins-Kmeans"
+            linkSite="https://github.com/brenodobroski/Pinguins-Kmeans"
             circleProject="./circle-movie.svg"
           />
         </Carousel>
       </section>
 
       <section className="s-about-me" id="s-about-me">
-        <h2>// About me</h2>
+        <h2># About me</h2>
         <p>
-          Oi! Eu sou o Breno! Sou estudante de Ciência da Computação
+          Oi! Eu sou o Breno! Sou estudante de Estátistica e Data Science
           <br />
           <br /> Comecei minha carreira na área de economia porém tive um
-          primeiro contato com a área de tecnologia e me apaixonei, hoje faço
-          muitos cursos e ja pude me envolver em alguns projetos que me deram
-          conhecimentos como HTML / CSS, Javascript, React, Tailwind, SASS,
-          Node.js, SQL e outros como vocês viram acima.
+          primeiro contato com a área de tecnologia e me apaixonei, sempre tive afinidade com finanças por ajudar meus pais nos negócios e vi a oportunidade de unir as duas coisas que mais gosto,
+          atualmente estou cursando Estatística pela IBMR e Ciência de Dados pela EBAC, anteriormente já tive contato com várias áreas de TI tendo bom conhecimento em front-end, API e Data Science
+          .
         </p>
         <div className="btns">
           <BtnAbout />
