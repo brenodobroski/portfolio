@@ -1,0 +1,223 @@
+@use "../../sass/variables" as *;
+
+.CardProject {
+  height: 440px;
+  width: 500px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.circle-project {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2022;
+}
+
+.neon-project {
+  position: inherit;
+  width: 100%;
+  z-index: 2025;
+  margin-top: -10px;
+}
+
+/*Image*/
+.background-blur-project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(75px);
+  -webkit-backdrop-filter: blur(10.1px);
+  z-index: 2024;
+}
+/*Description */
+.card-description {
+  display: flex;
+  position: absolute;
+  gap: 0.5em;
+  flex-direction: column;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+
+  width: 100%;
+  height: 70%;
+
+  color: #fff;
+  height: 59%;
+  bottom: -150px;
+  transition: all 0.5s ease-in-out;
+  padding: 24px 22px;
+  z-index: 2026;
+}
+
+/*Text*/
+.text-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+  position: inherit;
+  z-index: 2027;
+}
+
+.text-body {
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
+/* Hover states */
+.CardProject:hover .card-description {
+  transform: translateY(-30%);
+}
+
+.btns-projects {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 24px;
+}
+
+.Btn-github {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn-github:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn-github:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+.btn-site-project {
+  --primary-color: #4e36e9;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  color: var(--secondary-color);
+  padding: 13px 28px;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.btn-site-project .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-site-project .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.btn-site-project .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.btn-site-project:hover {
+  background-color: var(--hover-color);
+}
+
+.btn-site-project:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.btn-site-project:hover .arrow:before {
+  right: 0;
+}
+
+@media (max-width: 480px) {
+  .CardProject {
+    width: 300px;
+    height: 300px;
+
+    .text-title {
+      font-size: 24px;
+    }
+
+    .text-body {
+      font-size: 12px;
+    }
+
+    .card-description {
+      height: 75%;
+      bottom: -120px;
+    }
+
+    .CardProject:hover .card-description {
+      transform: translateY(-70%);
+    }
+  }
+}
